@@ -14,7 +14,7 @@ public class BonusPoint {
          explanation: it does not have 0 in it's represetnation
 
 
-         Method should take a Integer as argument, and return a boolean as well;
+         Method should take a Integer as argument, and return a boolean;
          Note that you can't convert the number into a String. you must use math operators, ex: /, %, +
      */
     public static void main(String[] args) {
