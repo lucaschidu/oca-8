@@ -13,14 +13,16 @@ public class Problem4 {
     {1,3,4,5}
 	 */
     public static void main(String[] args) {
+
     	int [] arrayOfInt = {1,3,4,1,4,5};
     	ArrayList<Integer> array = new ArrayList<>();
     	for (int i = 0; i < arrayOfInt.length; i++) {
 			array.add(arrayOfInt[i]);
-		}
+    	}
+
     	System.out.println(clearDuplicates(array));
     }
-    public static String clearDuplicates(ArrayList<Integer> array) {
+    public static ArrayList<Integer> clearDuplicates(ArrayList<Integer> array) {
     	ArrayList<Integer> newArray = new ArrayList<Integer>();
     	
     	for(int i = 0; i < array.size();i++) {
@@ -31,13 +33,8 @@ public class Problem4 {
     		}
     		
     	}
-    	StringBuilder sb = new StringBuilder();
-    	for(int i = 0; i< newArray.size(); i++) {
-    		if(i>0) 
-    			sb.append(',');
-    		sb.append(newArray.get(i));
-    	}
-    	return sb.toString();
+    	return newArray;
+    	
     }
 
     public static boolean exist(Integer number, ArrayList<Integer> array) {
