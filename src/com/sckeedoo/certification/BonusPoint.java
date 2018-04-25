@@ -1,5 +1,8 @@
 package com.sckeedoo.certification;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BonusPoint {
     /*
          Write a Java method to find out if a number N is tekwill-super-number.
@@ -17,7 +20,23 @@ public class BonusPoint {
          Method should take a Integer as argument, and return a boolean;
          Note that you can't convert the number into a String. you must use math operators, ex: /, %, +
      */
-    public static void main(String[] args) {
 
+    public static boolean superTek(int num){
+        List<Integer> list = new ArrayList<Integer>();
+        while (num != 0){
+            int cn = num % 10;
+            if (cn % 2 == 0)
+                if (!list.contains(cn))
+                    list.add(cn);
+            num /= 10;
+        }
+        if (list.size() == 5)
+            return true;
+
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(superTek(Integer.parseInt(args[0])));
     }
 }
